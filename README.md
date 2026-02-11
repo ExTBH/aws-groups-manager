@@ -26,16 +26,17 @@ aws-groups-manager version
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<ORG>/<REPO>/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ExTBH/aws-groups-manager/main/install.sh | bash
 ```
 
 or
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/<ORG>/<REPO>/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/ExTBH/aws-groups-manager/main/install.sh | bash
 ```
 
-Before publishing, set real owner/repo defaults in `install.sh`, or pass env vars:
+By default the installer/updater target `ExTBH/aws-groups-manager`.
+You can override for forks with env vars:
 
 ```bash
 AGM_GITHUB_OWNER=<org> AGM_GITHUB_REPO=<repo> ./install.sh

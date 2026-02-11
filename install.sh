@@ -2,10 +2,10 @@
 set -euo pipefail
 
 BINARY_NAME="aws-groups-manager"
-OWNER="${AGM_GITHUB_OWNER:-REPLACE_ORG}"
+OWNER="${AGM_GITHUB_OWNER:-ExTBH}"
 REPO="${AGM_GITHUB_REPO:-aws-groups-manager}"
 
-if [[ "$OWNER" == REPLACE_* || -z "$OWNER" ]]; then
+if [[ -z "$OWNER" ]]; then
   echo "error: installer is not configured with a GitHub owner" >&2
   echo "hint: set AGM_GITHUB_OWNER and AGM_GITHUB_REPO env vars, or update install.sh defaults" >&2
   exit 1

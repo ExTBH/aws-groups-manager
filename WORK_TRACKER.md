@@ -17,4 +17,4 @@
 ## Open Validation Items
 - [ ] Run live AWS end-to-end checks
 - [ ] Verify release assets + installer in real GitHub repo
-- [ ] Replace placeholder owner/repo defaults before publishing
+- [x] Replace placeholder owner/repo defaults before publishing

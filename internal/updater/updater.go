@@ -18,7 +18,7 @@ import (
 )
 
 var (
-	GitHubOwner = "REPLACE_ORG"
+	GitHubOwner = "ExTBH"
 	GitHubRepo  = "aws-groups-manager"
 )
 
@@ -40,7 +40,7 @@ func Run(ctx context.Context) error {
 		repo = v
 	}
 
-	if strings.HasPrefix(owner, "REPLACE_") || owner == "" {
+	if owner == "" {
 		return fmt.Errorf("update is not configured: set GitHubOwner variable at build time")
 	}
 
