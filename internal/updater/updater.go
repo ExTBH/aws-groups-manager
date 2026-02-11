@@ -17,7 +17,7 @@ import (
 	"aws-groups-manager/internal/version"
 )
 
-var (
+const (
 	GitHubOwner = "ExTBH"
 	GitHubRepo  = "aws-groups-manager"
 )
@@ -31,20 +31,11 @@ type release struct {
 }
 
 func Run(ctx context.Context) error {
-	owner := GitHubOwner
-	repo := GitHubRepo
-	if v := os.Getenv("AGM_GITHUB_OWNER"); v != "" {
-		owner = v
-	}
-	if v := os.Getenv("AGM_GITHUB_REPO"); v != "" {
-		repo = v
+	if GitHubOwner == "" {
+		return fmt.Errorf("update is not configured: set repository constants")
 	}
 
-	if owner == "" {
-		return fmt.Errorf("update is not configured: set GitHubOwner variable at build time")
-	}
-
-	rel, err := fetchLatestRelease(ctx, owner, repo)
+	rel, err := fetchLatestRelease(ctx, GitHubOwner, GitHubRepo)
 	if err != nil {
 		return err
 	}

@@ -35,13 +35,6 @@ or
 wget -qO- https://raw.githubusercontent.com/ExTBH/aws-groups-manager/main/install.sh | bash
 ```
 
-By default the installer/updater target `ExTBH/aws-groups-manager`.
-You can override for forks with env vars:
-
-```bash
-AGM_GITHUB_OWNER=<org> AGM_GITHUB_REPO=<repo> ./install.sh
-```
-
 ## Build
 
 ```bash
